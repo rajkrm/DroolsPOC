@@ -1,0 +1,34 @@
+package com.sudheer.properties.drool;
+
+import com.sudheer.drools.poc.Phone
+
+rule "Offer for iPhone5"
+    when
+        phone: Phone(phoneModel == "iPhone5")
+    then
+         phone.setOfferPercentage(50);
+    end
+rule "Offer for iPhone5S"
+    when
+        phone: Phone(phoneModel == "iPhone5S")
+    then
+         phone.setOfferPercentage(45);
+    end
+rule "Offer for iPhone6"
+    when
+        phone: Phone(phoneModel == "iPhone6")
+    then
+         phone.setOfferPercentage(15);
+    end
+rule "Offer for iPhone6S"
+    when
+        phone: Phone(phoneModel == "iPhone6S")
+    then
+         phone.setOfferPercentage(12);
+    end
+rule  "Offer for SamSung"
+    when
+        phone: Phone(phoneModel == "SamSung")
+    then
+        phone.setOfferPercentage(45);
+ end
